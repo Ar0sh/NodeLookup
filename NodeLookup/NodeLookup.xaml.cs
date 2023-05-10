@@ -128,7 +128,7 @@ namespace NodeLookup
             Close();
         }
 
-        private void TbCMDinput_PreviewKeyUp(object sender, KeyEventArgs e)
+        private void TbCMDInput_PreviewKeyUp(object sender, KeyEventArgs e)
         {
             Search("cmd");
         }
@@ -143,8 +143,8 @@ namespace NodeLookup
                     tbBITResult.Clear();
                     activeCMDs?.Clear();
                     activeBITs?.Clear();
-                    NodeDetails test = (NodeDetails)lbNodeList.SelectedItem;
-                    csFileReader.ReadFile(test.Path);
+                    NodeDetails nd = (NodeDetails)lbNodeList.SelectedItem;
+                    csFileReader.ReadFile(nd.Path);
                     activeCMDs = csFileReader.cmds;
                     activeBITs = csFileReader.bits;
                     lbAvaiCMDs.ItemsSource = activeCMDs;
